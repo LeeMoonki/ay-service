@@ -1,0 +1,14 @@
+{
+  "name": "ay-service",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "installpkg": "cd server && yarn && cd ..",
+    "dev": "yarn installpkg && docker-compose up",
+    "dev:build": "yarn installpkg && docker-compose up --build",
+    "stop": "docker-compose stop",
+    "down": "docker-compose down",
+    "resetdb": "cd mysql && sh ./reset.sh",
+    "rmi": "docker rmi -f $(docker images -f \"dangling=true\" -q)"
+  }
+}

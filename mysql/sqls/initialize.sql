@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS aydb;
+
+CREATE DATABASE aydb;
+USE aydb;
+
+CREATE TABLE examplelists (
+  id INTEGER AUTO_INCREMENT,
+  value TEXT,
+  PRIMARY KEY (id)
+);
